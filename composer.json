@@ -57,7 +57,7 @@
   },
   "autoload": {
     "psr-4": {
-      "OldTown\Workflow\ZF2\Admin\\": "src/"
+      "OldTown\\Workflow\\ZF2\\Admin\\": "src/"
     },
     "classmap": [
       "./Module.php",
@@ -66,8 +66,8 @@
   },
   "autoload-dev": {
     "psr-4": {
-      "OldTown\Workflow\ZF2\Admin\\PhpUnit\\Test\\": "test/phpunit/tests",
-      "OldTown\Workflow\ZF2\Admin\\PhpUnit\\TestData\\": "test/phpunit/_files"
+      "OldTown\\Workflow\\ZF2\\Admin\\PhpUnit\\Test\\": "test/phpunit/tests",
+      "OldTown\\Workflow\\ZF2\\Admin\\PhpUnit\\TestData\\": "test/phpunit/_files"
     },
     "classmap": [
       "./test/phpunit/Bootstrap.php",

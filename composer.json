@@ -19,7 +19,23 @@
 
     "zendframework/zend-modulemanager": "~2.4.0",
     "zendframework/zend-eventmanager": "~2.4.0",
-    "zendframework/zend-stdlib": "~2.4.0"
+    "zendframework/zend-stdlib": "~2.4.0",
+
+
+
+    "old-town/workflow-doctrine-zf2": "~0.1",
+    "old-town/workflow": "~0.1.3",
+    "old-town/propertyset": "~0.1",
+    "old-town/workflow-zf2": "~0.1.1",
+    "old-town/log": "~0.1",
+    "old-town/workflow-zf2-dispatch": "~0.1",
+    "old-town/workflow-doctrine": "~0.1.3",
+    "old-town/workflow-zf2-toolkit": "~0.1.4",
+    "old-town/workflow-zf2-service": "~0.1.2",
+
+
+    "old-town/workflow-designer-server": "~0.1.2",
+    "old-town/workflow-designer-client": "~0.1.7"
 
   },
   "require-dev": {

@@ -1,0 +1,36 @@
+<?php /** @var \Zend\View\Renderer\PhpRenderer $this */ ?>
+
+<?php echo $this->doctype(); ?>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <?php echo $this->headTitle('ZF2 ' . $this->translate('Workflow Admin'))->setSeparator(' - ')->setAutoEscape(false) ?>
+
+    <?php echo $this->headMeta()
+        ->appendName('viewport', 'width=device-width, initial-scale=1.0')
+        ->appendHttpEquiv('X-UA-Compatible', 'IE=edge')
+    ?>
+    <!-- assetics start-->
+    <?php
+    echo $this->plugin('HeadLink');
+    echo $this->plugin('HeadStyle');
+    echo $this->plugin('HeadScript');
+    ?>
+    <!-- assetics end-->
+
+</head>
+<body>
+<div>
+
+    <?php $navigation = $this->navigation('Zend\Navigation\WorkflowAdmin'); /** @var \Zend\View\Helper\Navigation  $navigation*/ ;?>
+    <?php echo $navigation->menu() ?>
+</div>
+
+
+<?php echo $this->content; ?>
+<!-- /container -->
+<?php echo $this->inlineScript() ?>
+
+</body>
+</html>

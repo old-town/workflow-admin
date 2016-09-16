@@ -5,6 +5,11 @@
  */
 namespace OldTown\Workflow\ZF2\Admin;
 
+
+use Zend\Navigation\Service\NavigationAbstractServiceFactory;
+
+
+
 return [
     'service_manager' => [
         'invokables'         => [
@@ -14,7 +19,7 @@ return [
 
         ],
         'abstract_factories' => [
-
+            NavigationAbstractServiceFactory::class => NavigationAbstractServiceFactory::class
         ]
     ],
 ];

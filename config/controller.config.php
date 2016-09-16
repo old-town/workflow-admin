@@ -10,7 +10,11 @@ use OldTown\Workflow\ZF2\Admin\Controller;
 return [
     'controllers' => [
         'invokables' => [
-            Controller\AdminController::class => Controller\AdminController::class
+            Controller\AdminController::class => Controller\AdminController::class,
+
+        ],
+        'factories' => [
+            Controller\WfController::class => Controller\WfControllerFactory::class
         ]
     ]
 ];

@@ -18,10 +18,22 @@ return [
                             'route' => 'admin[/]',
                             'defaults' => [
                                 'controller' => Controller\AdminController::class,
-                                'action' => 'app'
+                                'action' => 'index'
                             ],
-                            'may_terminate' => true
                         ],
+                        'may_terminate' => true,
+                        'child_routes' => [
+                            'workflowList' => [
+                                'type' => 'Segment',
+                                'options' => [
+                                    'route' => 'workflowList[/]',
+                                    'defaults' => [
+                                        'controller' => Controller\WfController::class,
+                                        'action' => 'workflowList'
+                                    ]
+                                ],
+                            ]
+                        ]
                     ]
                 ]
             ],

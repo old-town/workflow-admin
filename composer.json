@@ -21,7 +21,9 @@
     "zendframework/zend-eventmanager": "~2.4.0",
     "zendframework/zend-stdlib": "~2.4.0",
 
-
+    "zfcampus/zf-rest": "~1.2.0",
+    "zfcampus/zf-configuration": "~1.1.0",
+    "zfcampus/zf-content-validation": "~1.2.0",
 
     "old-town/workflow-doctrine-zf2": "~0.1",
     "old-town/workflow": "~0.1.3",
@@ -35,7 +37,8 @@
 
 
     "old-town/workflow-designer-server": "~0.1.2",
-    "old-town/workflow-designer-client": "~0.1.7"
+    "old-town/workflow-designer-client": "~0.1.7",
+    "webmozart/assert": "~1.1.0"
 
   },
   "require-dev": {

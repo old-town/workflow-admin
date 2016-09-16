@@ -34,8 +34,7 @@ class Module implements
     ConfigProviderInterface,
     DependencyIndicatorInterface,
     BootstrapListenerInterface,
-    InitProviderInterface,
-    DependencyIndicatorInterface
+    InitProviderInterface
 {
     /**
      * Имя секции в конфиги приложения отвечающей за настройки модуля

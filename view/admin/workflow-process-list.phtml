@@ -1,0 +1,13 @@
+<?php /** @var \Zend\View\Renderer\PhpRenderer $this */ ?>
+
+<ul>
+    <?php foreach ($this->listWorkflows as $page) : ?>
+        <?php /** @var \OldTown\Workflow\ZF2\Admin\WorkflowConfig\RegisteredWorkflow $page */?>
+        <li>
+            <a href="<?php echo $this->url('workflow/designer/view', [], ['fragment' => sprintf('view-workflow/workflow-manager/%s/workflow-name/%s', $page->getWorkflowManagerName(), $page->getWorkflowName() )])?>">
+                WorkflowManager: "<?php echo $page->getWorkflowManagerName() ?>". WorkflowName: "<?php echo $page->getWorkflowName() ?>"
+            </a>
+        </li>
+
+    <?php endforeach; ?>
+</ul>

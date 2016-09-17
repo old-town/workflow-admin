@@ -15,7 +15,8 @@ return [
             [
                 'old-town/admin/index' => __DIR__ . '/../view/admin/index.phtml',
                 'old-town/admin/layout' => __DIR__ . '/../view/layout/layout.phtml',
-                'old-town/wf/workflow-list' => __DIR__ . '/../view/admin/workflow-list.phtml'
+                'old-town/wf/workflow-list' => __DIR__ . '/../view/admin/workflow-list.phtml',
+                'old-town/wf-process/workflow-process' => __DIR__ . '/../view/admin/workflow-process-list.phtml',
             ],
             file_exists(__DIR__ . '/../template_map.php') ? include __DIR__ . '/../template_map.php' : []
         )

@@ -32,6 +32,16 @@ return [
                                         'action' => 'workflowList'
                                     ]
                                 ],
+                            ],
+                            'workflowProcess' => [
+                                'type' => 'Segment',
+                                'options' => [
+                                    'route' => 'workflowProcess[/]',
+                                    'defaults' => [
+                                        'controller' => Controller\WfProcessController::class,
+                                        'action' => 'workflowProcess'
+                                    ]
+                                ],
                             ]
                         ]
                     ]

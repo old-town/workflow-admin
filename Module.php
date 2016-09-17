@@ -9,6 +9,8 @@ namespace OldTown\Workflow\ZF2\Admin;
 use OldTown\Workflow\ZF2\Admin\Navigation\WorkflowListBuilder;
 use OldTown\Workflow\ZF2\Admin\Navigation\WorkflowListBuilderFactory;
 use OldTown\Workflow\ZF2\Admin\WorkflowConfig\ListRegisteredWorkflowBuilder;
+use OldTown\Workflow\ZF2\Admin\WorkflowConfig\ListWorkflowProcessTemplateBuilder;
+use OldTown\Workflow\ZF2\Admin\WorkflowConfig\ListWorkflowProcessTemplateBuilderFactory;
 use Webmozart\Assert\Assert;
 use Zend\EventManager\EventInterface;
 use Zend\ModuleManager\Feature\BootstrapListenerInterface;
@@ -146,6 +148,7 @@ class Module implements
     {
         $sm->setInvokableClass(ListRegisteredWorkflowBuilder::class, ListRegisteredWorkflowBuilder::class);
         $sm->setFactory(WorkflowListBuilder::class, WorkflowListBuilderFactory::class);
+        $sm->setFactory(ListWorkflowProcessTemplateBuilder::class, ListWorkflowProcessTemplateBuilderFactory::class);
     }
 
     /**
@@ -167,7 +170,14 @@ class Module implements
         $workflowListBuilder = $sm->get(WorkflowListBuilder::class);
         Assert::isInstanceOf($workflowListBuilder, WorkflowListBuilder::class);
 
+        /** @var ListWorkflowProcessTemplateBuilder $listWorkflowProcessTemplateBuilder */
+        $listWorkflowProcessTemplateBuilder = $sm->get(ListWorkflowProcessTemplateBuilder::class);
+        Assert::isInstanceOf($listWorkflowProcessTemplateBuilder, ListWorkflowProcessTemplateBuilder::class);
+
+
         $newMergedConfig = $workflowListBuilder->build($mergedConfig);
+        $newMergedConfig = $listWorkflowProcessTemplateBuilder->build($newMergedConfig);
+
         $configListener->setMergedConfig($newMergedConfig);
     }
 

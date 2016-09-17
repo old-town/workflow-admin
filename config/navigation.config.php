@@ -19,6 +19,14 @@ return [
                     [
 
                     ]
+            ],
+            'workflowProcess' => [
+                'label' => 'View Process',
+                'route' => 'workflow/admin/workflowProcess',
+                'pages' =>
+                    [
+
+                    ]
             ]
         ]
     ]

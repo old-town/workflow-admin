@@ -48,9 +48,10 @@ class ListWorkflowProcessTemplateBuilder
         }
 
 
-        die('test');
+        //die('test');
 
         //return $listRegisteredWorkflow;
+        return $appConfig;
     }
 
 }
